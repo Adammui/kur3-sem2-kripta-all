@@ -1,0 +1,38 @@
+version: 2.1
+
+orbs:
+  ruby: circleci/ruby@1.1.1
+
+executors:
+  default:
+    docker:
+      - image: cimg/ruby:3.0.0
+
+jobs:
+  rubocop:
+    executor: default
+    steps:
+      - checkout
+      - ruby/install-deps
+      - ruby/rubocop-check
+
+  rspec:
+    executor: default
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - ruby/install-deps
+      - ruby/rspec-test
+      - run: |
+          curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-$CC_TEST_REPORTER_VERSION > ./cc-test-reporter
+          chmod +x ./cc-test-reporter
+          ./cc-test-reporter format-coverage -t simplecov coverage/coverage.json
+          ./cc-test-reporter upload-coverage
+
+workflows:
+  version: 2.1
+  build:
+    jobs:
+      - rubocop
+      - rspec

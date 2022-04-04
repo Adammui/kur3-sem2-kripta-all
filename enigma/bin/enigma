@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'enigma'
+
+cli = Enigma::CLI.new
+cli.parse
