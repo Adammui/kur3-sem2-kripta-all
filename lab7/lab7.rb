@@ -1,6 +1,3 @@
-require './lab7/des'
-require_relative 'des'
-
 # Simple, thoroughly commented implementation of 128-bit AES / Rijndael using Google Go aka Golang
 # Chris Hulbert - chris.hulbert@gmail.com - http://splinter.com.au/blog
 # References:
@@ -325,7 +322,6 @@ end
 
 m = '1234567890ABCDEF1234567890ABCDEF'.to_bytes
 k = '0f1571c947d9e8590cb7add6af7f6798'.to_bytes # key
-# d="da24eeafa1bd976c44249fc098329b93".to_bytes # desired output
 
 keys = k.expand_key # KeyExpansion round keys are derived from the cipher key using Rijndael's key schedule
 o = aes_encrypt_128(m, keys)
