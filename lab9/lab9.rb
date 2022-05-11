@@ -15,7 +15,7 @@ n = 420
 a = 31
 a_obr = 271
 
-text_for_encryption = 'Astrovskaya_Darya_Aleksandrovna_'
+text_for_encryption = '_MY_FIO__MY_FIO__MY_FIO__MY_FIO_' # lenght 32
 
 # turns [1, 1, 1, 0, 1] to [0, 0, 0, 1, 1, 1, 0, 1]
 def add_zeros(arr)
