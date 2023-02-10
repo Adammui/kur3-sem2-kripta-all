@@ -1,4 +1,20 @@
-## kur3-sem2-kripta-all study of cryptography themes are listed below
+## kur3-sem2-kripta-all study of cryptography themes that are listed below with example scripts on Ruby
+### 
+- Shannon entropy;
+- scripts for determination of prime number, Greatest Common Factor and Least Common Multiple;
+- ciphers based on substitution (replacement, shift and vigenère cipher);
+- ciphers based on character permutation (Skital and sequential permutation algorithms);
+- Enigma machine;
+- block chiphers AES DES;
+- stream ciphers (quadratic residue generator, RC4)
+- asymmetric ciphers RSA and El-Gamal;
+- hash functions MDS SHA;
+- algorithms for generating and verifying an electronic digital signature (OpenSSL);
+- algorithms based on elliptic curves;
+## Запуск
+Created in RubyMine, with folder struction wrere you can choose lab number of use console:
+> ruby lab2.rb
+## ru
 Все лабораторные по предмету КМЗИ. Лектор - Урбанович. Тут код на руби, если кто-то будет воровать лабы и что-то не заработает, то земля вам пухом. Есть отчеты и док для подготовки к экзамену
 ## Тут приведены примеры скриптов для с различными алгоритмами шифрования, изучены такие темы как:
 - 2 Энтропия алфавита (по Шеннону). Количество информации.
@@ -14,6 +30,3 @@
 - 12 Исследование алгоритмов генерации и верификации электронной цифровой подписи (OpenSSL).
 - 13 Исследование криптографических алгоритмов на основе эллиптических кривых.
 - 14 Исследование стеганографического метода на основе преобразования наименее значащих битов.
-## Запуск
-Было сделано в RubyMine, все раскидано по папочкам ,где можно запускать каждый скрипт, в принципе можно и через консоль
-> ruby lab2.rb
